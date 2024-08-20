@@ -1,0 +1,18 @@
+
+
+mkdir engine_monitor
+cd engine_monitor
+
+touch README
+
+mkdir lib
+touch lib/engine_monitor.ex
+iex 
+c("lib/engine_monitor.ex")
+
+
+touch lib/run_engine_monitor.exs 
+
+# in terminal
+elixir run_engine_monitor.exs 
+
