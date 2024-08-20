@@ -49,21 +49,33 @@ defmodule EngineMonitor do
   end
 
   @doc """
-  Returns the latest reading from the list.
+  Returns the latest reading from the list. latest/1 is a guard clause.
   """
-  def latest_reading([head | _tail]), do: head
-  def latest_reading([]), do: nil
+  def latest([]), do: nil
+  def latest(readings), do: List.last(readings)
+
 
   @doc """
   Adds a new reading to the start of the list.
   """
-  def add_reading(reading, list), do: [reading | list]
+  def new_reading(reading, list), do: [reading | list]
 
   @doc """
   Finds the maximum reading in the list.
   """
+  # Using a guard clause (add additional conditions to function defintion) to handle an empty list
   def max_reading([]), do: nil
-  def max_reading([head | tail]), do: Enum.reduce(tail, head, &max/2)
+
+  # When the list is not empty, it uses pattern matching to split the list into head (first element) and tail (rest of the list)
+  # It then calls the max_reading/2 function with the tail and the maximum of the head and the current maximum
+  def max_reading([head | tail]), do: max_reading(tail, head)
+
+  # Private function to find the maximum reading
+  # When the list is empty, it returns the current maximum
+  defp max_reading([], max), do: max
+  # When the list is not empty, update the maximum and call the function recursively
+  defp max_reading([head | tail], max) when head > max, do: max_reading(tail, head)
+
 
   @doc """
   Counts the number of rising readings in the list.
