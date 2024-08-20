@@ -1,0 +1,33 @@
+# install elixir 
+sudo apt install elixir
+elixir --version
+
+# mix example
+mix new example 
+
+# mix compile 
+mix compile 
+
+# run the code: first way, interactive session 
+iex -S mix 
+
+# second way to run the code 
+mix run -e "Example.hello"
+
+# mix run 
+mix run  # during compile time 
+
+# use library: https://hex.pm/packages/uuid
+mix local.hex
+mix deps.get
+mix 
+
+
+
+
+# prac04
+iex 
+c("prac04.ex")
+Prac04.main
+
+

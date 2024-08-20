@@ -1,0 +1,13 @@
+BEGIN
+  INT a := 10;  -- Global variable with static scope
+
+  PROC calculate = (INT x) INT:
+  BEGIN
+      INT a := x + 5;  -- Local variable with block scope
+      a * 2
+  END;
+
+  print(( "Global a: ", a, newline ));  -- Prints the global 'a'
+  print(( "Result of calculate(3): ", calculate(3), newline ));  -- Uses local 'a'
+  print(( "Global a after calculate: ", a, newline ))  -- Global 'a' remains unchanged
+END

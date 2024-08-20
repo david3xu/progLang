@@ -1,0 +1,12 @@
+PROC factorial = (INT n) INT:
+(
+  IF n = 0 THEN
+    1
+  ELSE
+    n * factorial(n - 1)
+  FI
+);
+
+BEGIN 
+  print((factorial(5), newline))
+END
