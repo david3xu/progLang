@@ -74,7 +74,9 @@ defmodule EngineMonitor do
   # When the list is empty, it returns the current maximum
   defp max_reading([], max), do: max
   # When the list is not empty, update the maximum and call the function recursively
+  #
   defp max_reading([head | tail], max) when head > max, do: max_reading(tail, head)
+
 
 
   @doc """
