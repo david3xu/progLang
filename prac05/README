@@ -1,0 +1,7 @@
+# install scheme 
+sudo apt install mit-scheme
+
+# install vscode extension
+
+scheme 
+(load "func_vals.scm")
