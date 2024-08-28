@@ -8,18 +8,22 @@
 
 ; These are not equal, even though they do the same thing
 (display (eq? add1 inc))  ; => #f
+(newline)
 
 ; A function can be equal to itself
 (display (eq? add1 add1) ) ; => #t
+(newline)
 
 ; Lambda expressions are not equal, even if identical
 (display (eq? (lambda (x) (+ x 1)) 
      (lambda (x) (+ x 1))))  ; => #f
+(newline)
 
 ; But you can assign a lambda to a variable and compare that
 (define f (lambda (x) (+ x 1)))
 (define g f)
 (display (eq? f g))  ; => #t
+(newline)
 (display (f 5))  ; => 6
 (newline)
 display (g 5)  ; => 6
