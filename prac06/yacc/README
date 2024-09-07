@@ -1,0 +1,23 @@
+# Parser: syntax analysis
+# Semantic analysis and code generation (interpret our input)
+
+# Parse and does semantic processing on the stream of tokens produced by lex 
+
+# reference: https://github.com/jengelsma/yacc-tutorial
+
+sudo apt-get update
+sudo apt-get install bison
+
+ yacc -d calc.y  
+ lex calc.l
+ gcc lex.yy.c y.tab.c -o calc
+
+ a = 1 + 1000;
+print a;
+
+b = a + 1;
+print b
+;
+
+#$)T:
+exit;

@@ -1,0 +1,43 @@
+# install lex 
+sudo apt-get update
+sudo apt-get install flex
+
+# reference: https://github.com/jengelsma/lex-tutorial
+
+# Scanner (lexical analysis)
+
+# use lex and incorporate it into C program 
+
+# use lex to process a textual configuration file 
+
+# configuration file 
+# name value pairs 
+# .in extension indicates that the file is a template or input file that will be processed to generate a final configuration file or used as input for some other proces 
+config.in
+
+# define a head file 
+# include common symbols in both tokenizer and the client program 
+myscanner.h 
+
+# define lex file 
+myscanner.l 
+# first part of lex file: include the header file 
+
+# second part: the patterns and actions 
+# seperate the name and the value by colon: single statement action, return COLON
+# key words: "db_type", "db_name" ....
+# indentifier: [a-zA-Z][_a-zA-Z0-9]  ....
+# ignore white space: [ \t\n]       ;
+# . (any other characters will be an error): printf("unexpected charactoer\n")
+
+# third part: incorporate this to a C programming 
+flex myscanner.l: lex.yy.c
+
+# write a simple C program to utilize the yylex function 
+myscanner.c 
+
+# run C program 
+gcc myscanner.c lex.yy.c -o myscanner
+
+# run the program 
+./myscanner <config.in
