@@ -1,13 +1,13 @@
 #!/usr/bin/perl
 
-# Initialize $var with 5
+# # Initialize $var with 5
 $var = 5;
 
-# Print the value of $var (5) and a newline
+# # Print the value of $var (5) and a newline
 print "$var\n"; 
 
 # Call subroutine foo
-&foo;
+# &foo;
 
 # Call subroutine bar (increments $var to 6)
 &bar;

@@ -1,9 +1,9 @@
-use strict;
+# use strict;
 use warnings;
 use feature 'say';
 
 # Declare a package variable
-our $package_var = "Original package value";
+# our $package_var = "Original package value";
 
 sub outer_function {
     # Declare a lexically scoped variable (only visible in this function)
@@ -35,3 +35,4 @@ outer_function();
 # After outer_function completes, $package_var returns to its original value
 say "\nAfter calling outer_function:";
 say "  \$package_var: $package_var";
+say "  \$lexical_var: $lexical_var";
