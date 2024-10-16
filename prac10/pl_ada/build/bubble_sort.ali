@@ -1,0 +1,38 @@
+V "GNAT Lib v13"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U bubble_sort%b		bubble_sort.adb		2bea9195 NE OO PK GE
+
+U bubble_sort%s		bubble_sort.ads		c1a08689 BN EE NE OO PK GE
+
+D bubble_sort.ads	20241016035659 c1a08689 bubble_sort%s
+D bubble_sort.adb	20241016025514 ea4a171c bubble_sort%b
+D system.ads		20230727081304 426dafb8 system%s
+G a e
+G c Z s b [bubble_sort standard 7 9 none]
+X 1 bubble_sort.ads
+2+10 Element_Type 4r55 5r38 6r38 2|3r16
+3E10 Index_Type 4r31 2|6r33 8r30 9r26 10r35 11r27
+4A10 Array_Type(2+10)<3E10> 8r35 2|2r35
+5V20 "<"{boolean} 5>24 5>30
+5*24 Left{2+10}
+5*30 Right{2+10}
+6V20 ">"{boolean} 6>24 6>30 2|9s46
+6*24 Left{2+10}
+6*30 Right{2+10}
+7k9*Bubble_Sort 2z10 3z10 4z10 5z20 6z20 9l5 9e16 2|1b14 19l5 19t16
+8U15*Sort 8=20 2|2b15 18l9 18t13
+8*20 Items{4A10} 2|2b20 6r18 6r49 8r52 9r20 9r48 10r29 11m21 11r50 12m21
+X 2 bubble_sort.adb
+3*9 Temp{1|2+10} 10m21 12r33
+4b9 Swapped{boolean} 7m13 13m21 16r27
+6e13 I 8r46
+8e17 J 9r42 9r54 10r51 11r43 11r56 12r27
+

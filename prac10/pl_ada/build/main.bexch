@@ -1,0 +1,19 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+/home/david/curtin/ProgLang/prac10/pl_ada/bubble_sort.gpr
+20241016040129 0da9d0233a9f7bcc17cd7aefe4cfdc16
+[BOUND OBJECT FILES]
+/home/david/curtin/ProgLang/prac10/pl_ada/build/bubble_sort.o
+/home/david/curtin/ProgLang/prac10/pl_ada/build/main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-L/home/david/curtin/ProgLang/prac10/pl_ada/build/
+-L/home/david/curtin/ProgLang/prac10/pl_ada/build/
+-L/usr/lib/gcc/x86_64-linux-gnu/13/adalib/
+-shared
+-lgnat-13
+-ldl

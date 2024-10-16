@@ -1,0 +1,5 @@
+project Bubble_Sort is
+   for Source_Dirs use ("src");
+   for Object_Dir use "build";
+   for Main use ("main.adb");
+end Bubble_Sort;
